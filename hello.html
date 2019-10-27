@@ -7,6 +7,19 @@
 <body>
   <div id='app'>
     <p>{{ message }}</p>
+    <p v-text="message_v"></p>
+    <a :href="url">Sharemap</a><br>
+    <input type="button" value="クリック" :disabled="flag">
+    <p>{{ localEmail }}</p>
+    <p>{{ localEmailMethod() }}</p>
+
+    <form>
+      <input type="button" value='クリック' v-on:click='onclick'>
+    </form>
+    <div>算出プロパティ：{{ randomc }}</div>
+    <div>メソッド：{{ randomm() }}</div>
+    <div>現在日時：{{ current }}</div>
+    
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
   <script src="js/hello.js"></script>
